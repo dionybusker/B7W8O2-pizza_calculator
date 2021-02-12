@@ -1,10 +1,18 @@
 // pizzas array can be used
 
-var txt;
-console.log(txt)
 for (var i = 0; i < pizzas.length; i++) {
-    txt += '<li>' + pizzas[i].name + '</li>';
+    createList(pizzas[i].name);
 }
 
 
-document.getElementById("pizzaList").innerHTML = txt;
+// document.getElementById("pizzaList").innerHTML = txt;
+
+function createList(name) {
+    var list = document.createElement("li");
+        list.innerHTML = name;
+
+    document.getElementById("pizzaList").appendChild(list);
+}
+
+
+
